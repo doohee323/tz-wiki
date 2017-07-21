@@ -1,4 +1,4 @@
-# Run a wiki server on Vagrant or AWS
+# Run a wiki server on Vagrant
 
 install a wiki server with ubuntu 16.04, MySQL, nginx, php 7.0. 
 
@@ -17,31 +17,14 @@ install a wiki server with ubuntu 16.04, MySQL, nginx, php 7.0.
 		cf. all scripts
 			/wiki-vagrant/scripts/wiki.sh
 		
-	<for AWS>
-		# make ec2 instanace with Ubuntu Server 14.04 LTS
-		# set your pem file and aws ec2 ip address 
-		export PEM=topzone_ca1
-		export AWS_EC2_IP_ADDRESS=54.153.115.68
-		bash aws.sh
-		cf. all scripts
-			/wiki-vagrant/scripts/run_aws.sh
-			/wiki-vagrant/scripts/wiki.sh
-		cf. access to terminal after opening firewal for the ec2 instance
-			cd ~/.ssh
-			chmod 600 $PEM.pem
-			ssh -i $PEM.pem ubuntu@$AWS_EC2_IP_ADDRESS
 ```
 
 3. configure a wiki server
 ```
-	<for Vagrant>
-		- http://192.168.82.170 
-	<for AWS>
-		- http://$AWS_EC2_IP_ADDRESS
-		
-	- id / password = admin/admin123
-	
 	open site(http://192.168.82.170) and set up these,
+		- http://192.168.82.170 
+	
+	configure as below,
 		- Language: en, en
 		- Mysql 
 			- Database host: localhost
@@ -82,17 +65,6 @@ install a wiki server with ubuntu 16.04, MySQL, nginx, php 7.0.
 		mysql -h $AWS_EC2_IP_ADDRESS -P 3306 -u root -p 
 		
 	- password: passwd123
-```
-
--. upload directory
-```
-	
-```
-
--. register AWS Access key
-```
-	export AWS_KEY=11111111111111111111:1111111111111111111111111111111111111111
-	cf. on aws console, Your Security Credentials > Access Keys (Access Key ID and Secret Access Key)
 ```
 
 
