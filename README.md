@@ -15,7 +15,7 @@ install a wiki server with ubuntu 16.04, MySQL, nginx, php 7.0.
 		vagrant destroy -f && vagrant up
 		vagrant ssh
 		cf. all scripts
-			/wiki-vagrant/scripts/wiki.sh
+			/tz-wiki/scripts/wiki.sh
 		
 ```
 
@@ -38,8 +38,8 @@ install a wiki server with ubuntu 16.04, MySQL, nginx, php 7.0.
 			- Your username: doohee323
 			- Password: hdh123456
 			- Email address: doohee323@gmail.com
-		- copy downloaded LocalSettings.php to ~/wiki-vagrant
-			- you can change the set-up configuration ~/wiki-vagrant/LocalSettings.php
+		- copy downloaded LocalSettings.php to ~/tz-wiki
+			- you can change the set-up configuration ~/tz-wiki/LocalSettings.php
 				# for private wiki 
 				$wgGroupPermissions['*']['read'] = false;
 				$wgGroupPermissions['*']['edit'] = false;
@@ -49,7 +49,7 @@ install a wiki server with ubuntu 16.04, MySQL, nginx, php 7.0.
 			- if you want to re-install, 
 				rm /var/www/mediawiki/LocalSettings.php 
 		- run config.sh
-			cd ~/wiki-vagrant
+			cd ~/tz-wiki
 			vagrant ssh
 			cd /vagrant/scripts
 			bash config.sh
